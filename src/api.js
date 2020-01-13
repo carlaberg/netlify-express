@@ -1,13 +1,12 @@
 const express = require("express");
 const serverless = require("serverless-http");
+const variable = require("./folder/variable")
 
 const app = express();
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.json({
-    hello: "hi!"
-  });
+  res.json(variable);
 });
 
 app.use(`/.netlify/functions/api`, router);

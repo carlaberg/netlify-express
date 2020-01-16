@@ -2,3 +2,12 @@
   command = "npm run build"
   functions = "functions/"
   publish = "public/"
+
+[dev]
+  functionsPort = 34567
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/.netlify/functions/api"
+    [headers.values]
+    Access-Control-Allow-Origin = "http://localhost:34567"

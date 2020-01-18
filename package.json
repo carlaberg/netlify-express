@@ -4,6 +4,7 @@
   "description": "",
   "dependencies": {},
   "scripts": {
-    "prebuild": "cd backend/ && npm i && netlify-lambda build"
+    "prebuild": "cd backend/ && npm i && netlify-lambda build",
+    "build": "cd frontend && npm install && npm run build"
   }
 }

@@ -2,7 +2,9 @@
   "name": "netlify-express-root",
   "version": "1.0.0",
   "description": "",
-  "dependencies": {},
+  "dependencies": {
+    "netlify-lambda": "^1.6.3"
+  },
   "scripts": {
     "prebuild": "cd backend/ && npm i && netlify-lambda build",
     "build": "cd frontend && npm install && npm run build"

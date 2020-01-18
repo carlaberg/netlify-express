@@ -6,7 +6,7 @@
     "netlify-lambda": "^1.6.3"
   },
   "scripts": {
-    "prebuild": "cd backend/ && npm i && netlify-lambda build backend",
+    "prebuild": "netlify-lambda build backend",
     "build": "cd frontend && npm install && npm run build"
   }
 }

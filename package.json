@@ -4,6 +4,6 @@
   "description": "",
   "dependencies": {},
   "scripts": {
-    "prebuild": "cd ../backend/ && npm i"
+    "prebuild": "cd ../backend/ && npm i && netlify-lambda build"
   }
 }

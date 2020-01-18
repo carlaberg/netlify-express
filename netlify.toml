@@ -1,10 +1,15 @@
 [build]
+  base = "frontend/"
   command = "npm run build"
-  functions = "functions/"
+  functions = "../functions/"
   publish = "public/"
 
 [dev]
+  base = "frontend/"
+  command = "parcel index.html"
   functionsPort = 34567
+  functions = "../functions/"
+  publish = "public"
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.

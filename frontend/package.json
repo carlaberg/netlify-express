@@ -1,0 +1,13 @@
+{
+  "name": "netlify-express-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {},
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --out-dir public/"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

@@ -1,11 +1,9 @@
 {
-  "name": "netlify-express",
+  "name": "netlify-express-root",
   "version": "1.0.0",
   "description": "",
-  "dependencies": {
-    "netlify-lambda": "^1.4.3"
-  },
+  "dependencies": {},
   "scripts": {
-    "build": "netlify-lambda build backend"
+    "prebuild": "cd ../backend/ && npm i"
   }
 }

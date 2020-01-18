@@ -2,3 +2,5 @@ node_modules
 .netlify
 functions
 public
+frontend/.cache
+frontend/node_modules

@@ -1,6 +1,6 @@
 module.exports = {
   data: {
-    bulle: 'kanel',
+    bulle: 'kanel bulle',
     kaka: 'mandelkubb'
   }
 }

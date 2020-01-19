@@ -7,7 +7,7 @@
   command = "npm run dev"
   functionsPort = 34567
   functions = "functions/"
-  publish = "public"
+  publish = "public/"
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.

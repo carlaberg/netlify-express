@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "netlify-lambda": "^1.6.3"
+    "netlify-lambda": "^1.4.10"
   },
   "scripts": {
-    "dev": "netlify-lambda build backend",
+    "dev": "cd frontend && parcel index.html",
     "prebuild": "netlify-lambda install backend && netlify-lambda build backend",
     "build": "cd frontend && npm install && npm run build"
   }

@@ -1,7 +1,7 @@
 module.exports = {
   data: {
     bulle: 'kanel bulle',
-    kaka: 'mandelkubb',
+    kaka: 'mandelkubbEN',
     pickle: 'gurka'
   }
 }

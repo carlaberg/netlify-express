@@ -4,8 +4,7 @@
   publish = "public/"
 
 [dev]
-  base = "frontend/"
-  command = "parcel index.html"
+  command = "npm run dev"
   functionsPort = 34567
   functions = "functions/"
   publish = "public"
@@ -14,4 +13,4 @@
   # Define which paths this specific [[headers]] block will cover.
   for = "/.netlify/functions/api"
     [headers.values]
-    Access-Control-Allow-Origin = "http://localhost:34567"
+    Access-Control-Allow-Origin = "*"

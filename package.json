@@ -2,12 +2,9 @@
   "name": "netlify-express-root",
   "version": "1.0.0",
   "description": "",
-  "dependencies": {
-    "netlify-lambda": "^1.6.3"
-  },
+  "dependencies": {},
   "scripts": {
-    "dev": "cd frontend && parcel index.html",
-    "prebuild": "netlify-lambda install backend && netlify-lambda build backend",
-    "build": "cd frontend && npm install && npm run build"
+    "dev": "parcel frontend/index.html",
+    "build": "parcel build frontend/index.html --out-dir public/"
   }
 }

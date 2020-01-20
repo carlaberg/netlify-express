@@ -5,6 +5,6 @@
   "dependencies": {},
   "scripts": {
     "dev": "parcel frontend/index.html",
-    "build": "cd frontend && npm install && npm run build cd .."
+    "build": "cd frontend && npm install && npm run build"
   }
 }

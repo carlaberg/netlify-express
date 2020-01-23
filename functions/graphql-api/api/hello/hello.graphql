@@ -1,0 +1,9 @@
+# GQL schema defenition for Hello
+
+type Hello {
+  message: String
+}
+
+type Query {
+  hello: Hello!
+}

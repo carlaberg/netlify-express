@@ -118,19 +118,36 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"entry.js":[function(require,module,exports) {
-// hämtar från api-endpoint "/"
-fetch('/.netlify/functions/api').then(function (response) {
+// Fetch from api-endpoint "/"
+fetch('/.netlify/functions/rest-api').then(function (response) {
   return response.json();
 }).then(function (formatedResponse) {
   console.log('response from serverless backend, endpoint /:', formatedResponse);
 }).catch(function (err) {
   console.log(err);
-}); // hämtar från api-endpoint "/bakverk"
+}); // Fetch from api-endpoint "/bakverk"
 
-fetch('/.netlify/functions/api/bakverk').then(function (response) {
+fetch('/.netlify/functions/rest-api/bakverk').then(function (response) {
   return response.json();
 }).then(function (formatedResponse) {
   console.log('response from serverless backend, endpoint /bakverk:', formatedResponse);
+}).catch(function (err) {
+  console.log(err);
+});
+var query = "\n  query {\n    hello {\n      message\n    }\n  }\n";
+var opts = {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    query: query
+  })
+};
+fetch('/.netlify/functions/graphql-api', opts).then(function (res) {
+  return res.json();
+}).then(function (formatedResponse) {
+  console.log('response from serverless backend, graphql-endpoint', formatedResponse);
 }).catch(function (err) {
   console.log(err);
 });
@@ -162,7 +179,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62219" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61378" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

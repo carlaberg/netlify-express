@@ -13,7 +13,7 @@ router.get("/bakverk", (req, res) => {
   res.json({ bakverk: "tårta" });
 });
 
-app.use(`/.netlify/functions/api`, router);
+app.use(`/.netlify/functions/rest-api`, router);
 
 module.exports = app;
 module.exports.handler = serverless(app);

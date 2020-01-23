@@ -9,6 +9,6 @@
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
-  for = "/.netlify/functions/api"
+  for = "/.netlify/functions/rest-api"
     [headers.values]
     Access-Control-Allow-Origin = "*"

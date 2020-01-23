@@ -13,6 +13,4 @@ const serverOptions = {
 
 const server = new GraphQLServerLambda(gqlServerConfig)
 
-// server.start(serverOptions, ({port}) => console.log(`Server on port ${port}`))
-
 exports.handler = server.handler
